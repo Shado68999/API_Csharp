@@ -20,7 +20,6 @@ import org.springframework.web.bind.annotation.RestController
 class UserController(
        private val userService : UserService
 ) {
-
     @PostMapping("/User/create")
     fun create(@RequestBody user: User): User = userService.createUser(user)
 
@@ -42,5 +41,15 @@ class UserController(
 
     @DeleteMapping("/User/delete/{id}")
     fun delete(@PathVariable id: Long) : String = userService.deleteUser(id)
+
+    @PostMapping("/User/login")
+    fun login(@RequestBody user: User): ResponseEntity<User> {
+        val loggedInUser = userService.loginUser(user.email, user.password)
+        return if (loggedInUser != null) {
+            ResponseEntity.ok(loggedInUser)
+        } else {
+            ResponseEntity.notFound().build()
+        }
+    }
 
 }

@@ -9,4 +9,5 @@ interface UserService {
      fun getUserById(id: Long): Optional<User>
      fun editUser(user: User, id : Long) : User
      fun deleteUser(id: Long) : String
+     fun loginUser(email: String, password: String): User?
 }
