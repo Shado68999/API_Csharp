@@ -39,13 +39,6 @@ class UserServiceImpl(
         return "Utilisateur supprimer avec Succès !"
     }
 
-    override fun loginUser(email: String, password: String): User?
-    {
-            val user = userRepository.findByEmail(email)
-            if (user != null && user.password == password) {
-                return user
-            }
-        return null
-    }
+    override fun loginUser(email: String, password: String): User? = userRepository.findByEmailAndPassword(email, password)
 
 }

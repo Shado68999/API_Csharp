@@ -16,11 +16,11 @@ data class Conference(
         @Id
         @GeneratedValue(strategy = GenerationType.IDENTITY)
         internal val id : Long,
-        @Column(length = 80)
+        @Column(length = 80, name = "name")
         internal var name : String,
-        @Column(length = 100)
+        @Column(length = 100, name = "sigle")
         internal  var sigle : String,
-        @Column(length = 200)
+        @Column(length = 200, name = "theme")
         internal var theme : String,
         @Column
         internal var dateSoumission: Instant,
@@ -35,12 +35,13 @@ data class Conference(
 ) : Serializable {
 
         @PrePersist
-        fun prePersist() {
+        fun init() {
                 val now = Instant.now()
                 dateSoumission = now
                 dateResultat = now
                 dateInscription = now
                 dateDeroulement = now
         }
+
 }
 
