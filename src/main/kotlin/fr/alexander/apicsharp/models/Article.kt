@@ -26,8 +26,8 @@ data class Article(
         internal var description : String,
         @Column(length = 50)
         internal var fichier : String,
-        @ManyToOne
+        /*@ManyToOne
         @JoinColumn(name = "IdUser")
-        internal var user : User
+        internal var user : User*/
 ) : Serializable
 

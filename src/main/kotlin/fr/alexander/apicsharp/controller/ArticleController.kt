@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.RequestMapping
 import org.springframework.web.bind.annotation.RestController
 
 @RestController
-@RequestMapping("/ApiSharp/api/v1/Article")
+@RequestMapping("/ApiSharp/api/v1/")
 class ArticleController(
        private val articleService : ArticleService
 ) {

@@ -12,19 +12,19 @@ class CorsConfig {
         return object : WebMvcConfigurer {
             override fun addCorsMappings(registry: CorsRegistry) {
                 registry.addMapping("/ApiSharp/api/v1/User/**")
-                    .allowedOrigins("http://localhost")
+                    .allowedOrigins("http://192.168.1.73:8080")
                     .allowedMethods("GET", "POST", "PUT", "DELETE")
                     .allowedHeaders("*")
                     .exposedHeaders("Authorization")
 
                 registry.addMapping("/ApiSharp/api/v1/Article/**")
-                    .allowedOrigins("http://localhost")
+                    .allowedOrigins("http://192.168.1.73:8080")
                     .allowedMethods("GET", "POST", "PUT", "DELETE")
                     .allowedHeaders("*")
                     .exposedHeaders("Authorization")
 
                 registry.addMapping("/ApiSharp/api/v1/Conference/**")
-                    .allowedOrigins("http://localhost")
+                    .allowedOrigins("http://192.168.1.73:8080")
                     .allowedMethods("GET", "POST", "PUT", "DELETE")
                     .allowedHeaders("*")
                     .exposedHeaders("Authorization")

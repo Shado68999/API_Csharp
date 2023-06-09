@@ -27,7 +27,7 @@ class UserServiceImpl(
                     u.email = user.email
                     u.password = user.password
                     u.confirmPass = user.confirmPass
-                    u.conference = user.conference
+                   // u.conference = user.conference
                     u.role = user.role
                     u.origin = user.origin
                     return@map userRepository.save(u)

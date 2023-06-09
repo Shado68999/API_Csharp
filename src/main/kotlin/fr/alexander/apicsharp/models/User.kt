@@ -33,9 +33,9 @@ data class User(
         internal var role : String,
         @Column(length  =50)
         internal var origin : String,
-        @ManyToOne
+        /*@ManyToOne
         @JoinColumn(name = "CONFERENCE_ID")
         internal var conference : Conference,
         @OneToMany(mappedBy = "user")
-        internal var article: List<Article>
+        internal var article: List<Article>*/
 ) : Serializable

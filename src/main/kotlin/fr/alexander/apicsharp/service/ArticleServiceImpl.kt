@@ -21,7 +21,7 @@ class ArticleServiceImpl(
                     it.title = article.title
                     it.description = article.description
                     it.fichier = article.fichier
-                    it.user = article.user
+                   // it.user = article.user
                     return@map articleRepository.save(it)
                 }.orElseThrow { RuntimeException("Article non trouvé") }
     }

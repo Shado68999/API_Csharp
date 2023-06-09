@@ -30,8 +30,8 @@ data class Conference(
         internal var dateInscription: Instant,
         @Column
         internal var dateDeroulement: Instant,
-        @OneToMany(mappedBy = "conference")
-        internal var user: List<User>
+       /* @OneToMany(mappedBy = "conference")
+        internal var user: List<User>*/
 ) : Serializable {
 
         @PrePersist
